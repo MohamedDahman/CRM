@@ -14,12 +14,14 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 
-@Configuration
+//@Configuration
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter  {
 
 
-    @Autowired
+
+  //  @Autowired
     private UserDetailsServiceImp userDetailsService;
+
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -36,8 +38,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter  {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 
-        auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
-        auth.authenticationProvider(authenticationProviderUser());
+    //    auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
+     //   auth.authenticationProvider(authenticationProviderUser());
     }
 
     @Bean

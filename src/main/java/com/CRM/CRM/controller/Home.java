@@ -35,4 +35,9 @@ public class Home {
         return "index";
     }
 
+    @GetMapping("/addParticipant")
+    String addParticipant(){
+        return "addParticipant";
+    }
+
 }

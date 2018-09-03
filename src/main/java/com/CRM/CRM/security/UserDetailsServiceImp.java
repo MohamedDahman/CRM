@@ -2,6 +2,7 @@ package com.CRM.CRM.security;
 
 import com.CRM.CRM.model.User;
 import com.CRM.CRM.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -13,10 +14,11 @@ import java.util.Optional;
 @Service
 public class UserDetailsServiceImp implements UserDetailsService {
 
-    private final UserRepository userRepository;
+    @Autowired
+    UserRepository userRepository  ;
 
-    public UserDetailsServiceImp(UserRepository userRepository) {
-        this.userRepository = userRepository;
+    public UserDetailsServiceImp() {
+
     }
 
     @Override
